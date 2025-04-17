@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    background: #f8f9fa; /* Light background */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Centered Form Card */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Form Fields */
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #495057;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #c493e0;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    padding: 6px;
+}
+
+.btn-primary:hover {
+    background-color: #7d3eb7;
+}
+
+/* Success Button for Register */
+.btn-success {
+    background-color: #78b8ad;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-success:hover {
+    background-color: #9dbfbe;
+}
+
+/* Links */
+.text-decoration-none {
+    font-size: 14px;
+    color: #627b97;
+    transition: 0.3s;
+}
+
+.text-decoration-none:hover {
+    color: #0056b3;
+}
+
+/* Success Message */
+.alert-success {
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Error Messages */
+.text-danger {
+    font-size: 16px;
+}
+
+/* Remember Me Checkbox */
+.form-check-input {
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #495057;
+}
+
+.dashboard-nav {
+    background-color: #a991b9;
+
+}
+
+.btn-edit {
+  background-color: #9c689a;
+  color: white;
+}
+
+.btn-edit:hover {
+    background-color: #a499a4;
+    color: white;
+  }
+
+.btn-delete {
+    background-color: brown;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: rgb(156, 115, 115);
+    color: white;
+}
+
+.btn-list {
+    background-color:rgb(105, 87, 107);
+    color: white;
+}
+
+.btn-list:hover {
+    background-color:rgb(119, 110, 120);
+    color: white;
+}
+
+.bg-profile {
+    background-color: #9c689a;
+}
+
+
+.text-job {
+    color: black;
+}
+
+.text-job:hover {
+    color: rgba(84, 79, 79, 0.826);
+}
+
+.btn-danger {
+   
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    padding: 6px;
+}
+
+
+
