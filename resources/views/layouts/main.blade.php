@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>@yield('title', 'My Website')</title>
+
+    {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    {{-- Vite Assets --}}
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 
-
+    {{-- Custom CSS --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-   <!-- Check if user is logged in -->
-   @auth
-   <x-navbar /> <!-- Dashboard Navigation -->
-@else
-   <x-guest-navbar /> <!--  Guest Navigation f -->
-@endauth
 
+    {{-- Navbar based on Auth Status --}}
+    @if (!request()->is('/')) {{-- Hides navbar only on welcome page --}}
+    @auth
+        <x-navbar />
+    @else
+        <x-guest-navbar />
+    @endauth
+@endif
 
-    <!-- Page Content -->
-    <div class="min-h-screen bg-gray-100">
-        <main>
-            @yield('content')
+    <div class="min-vh-100 bg-light">
+        <main class="container mt-5">
+            @yield('content')  {{-- This is where the content from login.blade.php will be rendered --}}
         </main>
-
     </div>
 
-    <script src="{{ mix('js/app.js') }}"></script>
+    {{-- Footer --}}
+    <footer class="text-center py-4 text-muted bg-white border-top">
+        &copy; {{ date('Y') }} Job Seek. All rights reserved.
+    </footer>
 
+    {{-- Bootstrap JS Bundle --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.main')  {{-- This will extend main.blade.php layout --}}
+@section('title', 'Admin Login')  {{-- Setting the title for this page --}}
+
+@section('content')  {{-- This section will be injected into @yield('content') in main.blade.php --}}
     <div class="container mt-5">
         <h2>Admin Login</h2>
 
@@ -27,5 +22,4 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
-</body>
-</html>
+@endsection
